@@ -1,0 +1,14 @@
+<html lang="en">
+<body>
+
+       <h2>Edit students</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update</button>
+    </form>
+
+    <p><a href="/student/">back</a></p>
+</body>
+</html>

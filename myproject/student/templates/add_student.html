@@ -1,0 +1,13 @@
+<html lang="en">
+    <body>
+        <h2>Add students</h2>
+
+        <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+    <p><a href="/student/">Back</a></p>
+    </body>
+</html>

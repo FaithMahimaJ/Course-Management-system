@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta Charset="UTF-8">
+        <meta name="viewpoint" content=""width=device=width,initial scale >
+        <title>Document</title>
+    </head>
+<body>
+    <h1>Student List</h1>
+
+<p><a href="/student/add/">Add New Student</a></p>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>city</th>
+        
+    </tr>
+
+    {% for s in student %}
+    <tr>
+        <td>{{s.id}}</td>
+        <td>{{s.name}}</td>
+        <td>{{s.age}}</td>
+        <td>{{s.email}}</td>
+        <td>{{s.city}}</td>
+        <td>
+            <a href="/student/edit/{{s.id}}/">Edit</a>
+            <a href="/student/delete/{{s.id}}/">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
